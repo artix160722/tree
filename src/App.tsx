@@ -57,34 +57,32 @@ const App = () => {
   root3.child[1].child[1].child[1].child.push(createNode(5));
 
   return (
-    <>
-      <CardWrapper role="card">
-        <CardHeader>
-          <CardHeading>Result:</CardHeading>
-          <CardHeading>{result}</CardHeading>
-        </CardHeader>
-        <CardBody>
-          <p>tree 1:</p>
-          <JSONTree data={root1} />
-          <p>tree 2:</p>
-          <JSONTree data={root2} />
-          <p>tree 3:</p>
-          <JSONTree data={root3} />
-        </CardBody>
-        <CardButton onClick={hadleNodes}>
-          nodes without children in tree 1
-        </CardButton>
-        <CardButton onClick={hadleEdges}>
-          largest number of edges in tree 1
-        </CardButton>
-        <CardButton onClick={() => hadleCompare(root1, root2)}>
-          compare tree 1 and 2
-        </CardButton>
-        <CardButton onClick={() => hadleCompare(root1, root3)}>
-          compare tree 1 and 3
-        </CardButton>
-      </CardWrapper>
-    </>
+    <CardWrapper role="card">
+      <CardHeader>
+        <CardHeading>Result:</CardHeading>
+        <CardHeading>{result}</CardHeading>
+      </CardHeader>
+      <CardBody>
+        <p>tree 1:</p>
+        <JSONTree data={root1} />
+        <p>tree 2:</p>
+        <JSONTree data={root2} />
+        <p>tree 3:</p>
+        <JSONTree data={root3} />
+      </CardBody>
+      <CardButton onClick={hadleNodes}>
+        nodes without children in tree 1
+      </CardButton>
+      <CardButton onClick={hadleEdges}>
+        largest number of edges in tree 1
+      </CardButton>
+      <CardButton onClick={() => hadleCompare(root1, root2)}>
+        compare tree 1 and 2
+      </CardButton>
+      <CardButton onClick={() => hadleCompare(root1, root3)}>
+        compare tree 1 and 3
+      </CardButton>
+    </CardWrapper>
   );
 };
 
